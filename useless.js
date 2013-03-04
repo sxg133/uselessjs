@@ -49,7 +49,14 @@
 				 	function(element) {
 				 		var angle = Math.floor(Math.random() * 360);
 				 		$(element).addClass('why_am_i_crooked' + elnum);
-				 		$('head').append('<style type="text/css"> .why_am_i_crooked' + elnum + ' { transform: rotate(' + angle + 'deg) } </style>');
+				 		$('head').append('<style type="text/css"> .why_am_i_crooked' + elnum + 
+				 			' { ' +
+				 				'-moz-transform: rotate(' + angle + 'deg); ' +
+				 				'-webkit-transform: rotate(' + angle + 'deg); ' +
+				 				'-o-transform: rotate(' + angle + 'deg); ' +
+				 				'-khtml-transform: rotate(' + angle + 'deg); ' +
+				 				'transform: rotate(' + angle + 'deg); ' +
+			 				'} </style>');
 				 	}, this
 				 );
 			} else {	// apply random colors
