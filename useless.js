@@ -7,8 +7,11 @@
 		var doSomethingUseless = function(something, element) {
 			$.when( $(element).fadeOut() ).then(
 				function() {
+					var parent = $(element).parent();
+					$(element).detach();
 					something(element);
 					elnum++;
+					$(parent).append(element)
 					$(element).fadeIn();
 				}
 			);
