@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This page is nice.</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="useless.js"></script>
+		<script type="text/javascript">
+			var countdown;
+			var count = 0;
+			function decrementCountdown() {
+				count--;
+				$('#timer').html(count);
+				if (count==0) {
+					clearInterval(countdown);
+					$('#modal').hide();
+					explode();
+				}
+			}
+
+			function explode() {
+				$('header, p').useless();
+			}
+
+			$(function() {
+				count = 5;
+				countdown = setInterval(decrementCountdown, 1000);
+				$('#status').animate({
+					'width': '100%'
+				}, count*1000)
+			})
+		</script>
+		<style type="text/css">
+
+			hgroup {
+				text-align: center;
+			}
+
+			mark {
+				background-color: white;
+				font-weight: bold;
+			}
+
+			div.content {
+				-moz-column-count: 2;
+				-webkit-column-count: 2;
+				-o-column-count: 2;
+				-khtml-column-count: 2;
+				column-count: 2;
+			}
+
+			.content {
+				width: 970px;
+				margin: auto;
+			}
+
+			footer {
+				text-align: center;
+			}
+
+			#modal {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				height: 150px;
+				margin-top: -75px;
+				width: 300px;
+				margin-left: -150px;
+				border: solid thin black;
+				border-radius: 2px;
+				background-color: white;
+			}
+
+			#modal > p {
+				margin-left: 10px;
+			}
+
+			.statusbar {
+				height: 60px;
+				width: 90%;
+				margin: 20px auto;
+				padding: 0;
+				border: solid black thin;
+				border-radius: 5px;
+				background-color: #39AFEF;
+			}
+
+			#status {
+				background-color: white;
+				height: 100%;
+				width: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="modal">
+			<p>This page will self-destruct in <mark id="timer">5</mark> seconds.</p>
+			<div class="statusbar">
+				<div id="status">
+				</div>
+			</div>
+		</div>
+		<header>
+			<hgroup class="content">
+				<h1>Lorem ipsum dolor</h1>
+				<h2>sit amet, consectetur adipiscing elit</h2>
+			</hgroup>
+		</header>
+		<div class="content">
+			<section>
+				<header>
+					<h3>Lorem ipsum dolor sit amet</h3>
+				</header>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sit amet dolor sapien, quis sagittis ante. Nullam tempus mauris at lectus fringilla convallis vitae id tellus. Vivamus feugiat consequat dui, eu cursus ante viverra sit amet. Aliquam pellentesque mattis euismod. Nam sit amet velit sed sem cursus blandit. Donec tempus cursus sodales. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum quis massa nunc, sit amet tempus risus. Mauris id malesuada magna.
+				</p>
+			</section>
+			<section>
+				<header>
+					<h3>Aliquam erat volutpat</h3>
+				</header>
+				<p>
+					Aliquam erat volutpat. Quisque non ligula ante, et posuere nulla. Curabitur dui justo, sodales sit amet sodales nec, posuere non sapien. Vestibulum felis nisi, viverra et dapibus varius, molestie in turpis. Nullam vulputate sem at arcu tincidunt venenatis. Cras eget sodales mauris. Fusce at imperdiet justo. Maecenas vel dui in est pulvinar adipiscing nec vel metus. In varius, orci eget porttitor vehicula, elit est bibendum eros, eu porta mi orci id urna. Vivamus sagittis congue dictum.
+				</p>
+			</section>
+			<section>
+				<header>
+					<h3>Cras faucibus dolor</h3>
+				</header>
+				<p>
+					Cras faucibus dolor sed enim hendrerit iaculis. Donec vulputate orci et nisi posuere id ultricies velit molestie. Sed felis lacus, condimentum accumsan condimentum a, ultricies sed diam. Phasellus nulla nibh, consequat vitae eleifend sed, sollicitudin nec mauris. Vestibulum eget dolor et neque feugiat vehicula ac consequat nunc. Duis pulvinar turpis lacinia libero sodales vitae egestas risus tempus. Sed semper odio vel felis lacinia blandit. Cras blandit metus sapien, quis convallis urna. Nunc quis lorem eget sem scelerisque hendrerit quis ac odio. Nunc pulvinar aliquet sem quis varius. Sed tempor dictum iaculis. Sed nisi nisi, posuere sed eleifend id, tincidunt et neque.
+				</p>
+			</section>
+			<section>
+				<header>
+					<h3>Sed scelerisque purus</h3>
+				</header>
+				<p>
+					Sed scelerisque purus at turpis condimentum pulvinar. Ut rutrum elementum velit at condimentum. Nunc commodo consectetur congue. Duis nisl enim, euismod quis imperdiet ac, tincidunt nec sapien. Duis id augue justo. Ut id est vitae sapien molestie condimentum ut et risus. Nullam laoreet, velit a varius bibendum, neque diam sollicitudin magna, eget aliquet elit elit et est. Nunc risus erat, faucibus et vehicula nec, scelerisque a velit. Quisque hendrerit mattis nunc, id feugiat lacus lacinia ac. Aliquam non purus lacus, non porta metus. Nulla pellentesque, sapien eget lobortis sagittis, magna dui lacinia mauris, vel porta lorem purus at massa. Sed eu elit mauris. Pellentesque at sapien diam, id porttitor lacus. Duis laoreet tortor nec augue tincidunt blandit. Suspendisse nec augue tincidunt dui adipiscing fringilla.
+				</p>
+			</section>
+			<section>
+				<header>
+					<h3>Cum sociis natoque penatibus</h3>
+				</header>
+				<p>
+					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In porttitor massa et massa luctus at euismod augue luctus. Morbi id orci eget purus sollicitudin convallis. Fusce volutpat, dolor id malesuada egestas, mauris libero ultricies odio, sed viverra nisl massa et neque. Etiam vehicula, tellus id placerat venenatis, erat quam euismod enim, in mollis dolor erat sed nunc. Integer euismod mollis sem, vel facilisis ante porttitor sed. Morbi et risus vel mauris sollicitudin mollis sagittis eu est. Phasellus pulvinar quam ac purus adipiscing et interdum sem egestas. Sed mattis nisi ut metus euismod congue.
+				</p>
+			</section>
+		</div>
+		<footer>
+			<p class="content">
+				Nunc pulvinar aliquet sem quis
+			</p>
+		</footer>
