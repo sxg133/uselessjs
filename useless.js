@@ -11,7 +11,7 @@
 					$(element).detach();
 					something(element);
 					elnum++;
-					$(parent).append(element)
+					$(parent).append(element);
 					$(element).fadeIn();
 				}
 			);
